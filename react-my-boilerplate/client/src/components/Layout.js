@@ -6,11 +6,14 @@ import {pullRight, h1} from '../style/Layout.css'
 
 const Layout = ({children}) =>{
     return (
-        <Container>
-            <Link to="/">
+        <Container className="main-container">
+            <div className="nav-container">
                 <Header as="h1" className={h1}>
-                    DASH!!!
+                    HEADER!
                 </Header>
+            </div>
+            <Link to="/">
+                
             </Link>
             {children}
             <Divider />

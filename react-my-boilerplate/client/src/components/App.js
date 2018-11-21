@@ -4,7 +4,7 @@ import {Switch, BrowserRouter as Router, Route} from 'react-router-dom'
 import importedComponent from 'react-imported-component'
 import { createStore } from 'redux';
 import { Provider  } from 'react-redux';
-import reducers from './reducers';
+import reducers from '../common/reducers';
 
 import Home from './Home'
 import Loading from './Loading'
