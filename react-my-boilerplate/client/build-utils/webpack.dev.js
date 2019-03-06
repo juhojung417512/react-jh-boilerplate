@@ -4,10 +4,10 @@ const port = process.env.PORT || 3000;
 const config = {
   mode: 'development',
   entry: {
-    app: `${commonPaths.appEntry}/index.js`
+    'babel-polyfill': `${commonPaths.appEntry}/index.js`
   },
   output: {
-    filename: '[name].[hash].js'
+    filename: 'bundle.js'
   },
   devtool: 'inline-source-map',
   module: {

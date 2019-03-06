@@ -34,9 +34,11 @@ const extra = (state = { value: 'other_reducer_haha' }, action) => {
     }
 }
 
-const reducerApp = combineReducers({
-    counter,
-    extra
-});
 
-export default reducerApp;
+export default function createStore(reducers){
+    return combineReducers({
+        counter,
+        extra,
+        ...reducers
+    })
+}

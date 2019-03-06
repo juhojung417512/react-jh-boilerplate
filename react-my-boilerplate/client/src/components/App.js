@@ -4,7 +4,7 @@ import {Switch, BrowserRouter as Router, Route} from 'react-router-dom'
 import importedComponent from 'react-imported-component'
 import { createStore } from 'redux';
 import { Provider  } from 'react-redux';
-import reducers from '../common/reducers';
+import configureStore from '../common/configureStore';
 
 import Home from './Home'
 import Loading from './Loading'
@@ -24,9 +24,9 @@ const AsyncNoMatch = importedComponent(
     }
 )
 
-const store = createStore(reducers);
 
 const App = () => {
+    const store = configureStore();
     return (
         <Provider store={store}>
             <Router>
